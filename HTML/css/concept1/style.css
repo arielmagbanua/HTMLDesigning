@@ -320,6 +320,14 @@ body {
 .add-top {margin-top: 20px;}
 .nodisplay {display: none;}
 
+.padded-style-left{
+	padding-left: 50px;
+}
+
+.padded-style-right{
+	padding-right: 50px;
+}
+
 header#masthead{
 	height: 628px;
 	width: 100%;
@@ -331,11 +339,83 @@ header#masthead{
 	-o-background-size: cover;
 }
 
+#branding.top-bar{
+	width: 100%;
+	height: 80px;
+	background: url("../../images/concept1/top_bar.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.branding-row{
+	padding: 14px 10px 14px 10px;
+}
+
+#site-logo{
+	margin-bottom: 6px;
+}
+
+ul#social-media-icons{
+	list-style: none;
+}
+
+ul#social-media-icons li{
+	float: left;
+	margin: 0px 5px 0px 5px;
+}
+
+#banner-message-holder{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+#banner-message{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 58px;
+}
+
+.top-bar-margin{
+	margin-top: 80px;
+}
+
+#banner-message-row{
+	margin-top: 55px;
+}
+
+#get-in-touch-section{
+	width: 360px;
+	height: 405px;
+	background: url("../../images/concept1/get_in_touch_section.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	padding: 28px 28px 28px 28px;
+}
+
+#get-in-touch-section-form{
+	margin-top: 28px;
+}
+
+.form-vertical-margin-top{
+	margin-top: 28px;
+}
+
+.form-vertical-margin-bottom{
+	margin-bottom: 28px;
+}
 
 /*--------------------------------------------------------------
 11.0 Media Queries
 --------------------------------------------------------------*/
-
 @media screen and (min-width: 75em) {
 	/* width 1200px up */
 }
