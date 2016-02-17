@@ -345,12 +345,10 @@ header#masthead{
 	background: url("../../images/concept1/top_bar.png");
 	background-repeat: repeat;
 	background-position: center;
-	/*
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 5;
-	*/
 }
 
 .branding-row{
@@ -381,14 +379,21 @@ ul#social-media-icons li{
 }
 
 .top-bar-margin{
-	margin-top: 80px;
+	margin-top: 127px;
 }
 
-/*
-#banner-message-row{
-	margin-top: 55px;
+.section-image{
+	width: 100%;
+	height: auto;
+	margin:auto;
+	display:block;
 }
-*/
+
+.img-container{
+	height: 275px;
+	width: 100%;
+	overflow: hidden;
+}
 
 #get-in-touch-section{
 	width: 360px;
@@ -417,6 +422,59 @@ ul#social-media-icons li{
 .form-panel-title{
 	font-size: 28px;
 	color: whitesmoke;
+}
+
+.section-group-title{
+	padding-top: 22px;
+	padding-bottom: 22px;
+}
+
+#content{
+	margin-top: 30px;
+}
+
+.section-title{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+#about-section{
+	margin-top: 90px;
+}
+
+#about-title{
+	padding-top: 40px;
+	padding-bottom: 55px;
+}
+
+.site-footer{
+	background: #2e6fab;
+	margin-top: 95px;
+}
+
+#footer-content-container{
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+#phone-email{
+	margin-top: 10px;
+}
+
+#contact-info span{
+	color: white;
+}
+
+#site-owner-footer{
+	padding: 30px 50px 30px 50px;
+}
+
+#site-owner-footer #chris{
+	font-size: xx-large;
+}
+
+#site-owner-footer #job{
+	font-size: small;
 }
 
 /*--------------------------------------------------------------
