@@ -433,18 +433,21 @@ ul#social-media-icons li{
 	margin-top: 30px;
 }
 
-.section-title{
-	padding-top: 12px;
-	padding-bottom: 12px;
-}
-
-#about-section{
-	margin-top: 90px;
+#divider{
+	height: 184px;
+	width: 100%;
+	background: url("../../images/concept1/about_divider_cropped.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	margin-top: 109px;
 }
 
 #about-title{
-	padding-top: 40px;
-	padding-bottom: 55px;
+	padding-top: 71px;
+	padding-bottom: 71px;
 }
 
 .site-footer{
@@ -452,17 +455,12 @@ ul#social-media-icons li{
 	margin-top: 95px;
 }
 
-#footer-content-container{
-	padding-top: 40px;
-	padding-bottom: 30px;
+#contact-info span{
+	color: white;
 }
 
 #phone-email{
 	margin-top: 10px;
-}
-
-#contact-info span{
-	color: white;
 }
 
 #site-owner-footer{
@@ -477,6 +475,16 @@ ul#social-media-icons li{
 #site-owner-footer #job{
 	font-size: small;
 	color: white;
+}
+
+.section-title{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+#footer-content-container{
+	padding-top: 40px;
+	padding-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
