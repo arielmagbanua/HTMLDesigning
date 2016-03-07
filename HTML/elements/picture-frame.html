@@ -1,0 +1,31 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<dom-module id="picture-frame">
+
+      <template>
+            <!-- scoped CSS for this element -->
+            <style>
+                  div {
+                        display: inline-block;
+                        background-color: #ccc;
+                        border-radius: 8px;
+                        padding: 4px;
+                  }
+            </style>
+
+            <div>
+                  <header>Local dom header followed by distributed dom.</header>
+                  <!-- any children are rendered here -->
+                  <content></content>
+                  <footer>Footer after distributed dom.</footer>
+            </div>
+      </template>
+
+      <script>
+            Polymer({
+                  is: "picture-frame",
+            });
+      </script>
+
+</dom-module>

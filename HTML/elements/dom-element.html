@@ -1,0 +1,20 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<dom-module id="dom-element">
+
+    <template>
+        <p>I'm a DOM element. This is my local DOM!</p>\
+        <span id="additional"></span>
+    </template>
+
+    <script>
+        Polymer({
+            is: "dom-element",
+            ready: function(){
+                this.textContent = "Hahaha I am the DOM Vader!";
+            }
+        });
+    </script>
+
+</dom-module>

@@ -1,0 +1,43 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+<!-- import the iron-input custom element -->
+<link rel="import"
+      href="../bower_components/iron-input/iron-input.html">
+
+<dom-module id="editable-name-tag">
+      <template>
+            <p>
+                  This is a <strong>{{owner}}</strong>'s editable-name-tag.
+            </p>
+            <!-- iron-input exposes a two-way bindable input value -->
+            <input is="iron-input" bind-value="{{owner}}"
+                   placeholder="Your name here...">
+      </template>
+
+      <script>
+            Polymer({
+                  is: "editable-name-tag",
+                  properties: {
+                        owner: {
+                              type: String,
+                              value: "Tiburcio"
+                        }
+                  }
+            });
+
+            //extending input html element.
+            MyInput = Polymer({
+
+                  is: 'my-input',
+
+                  extends: 'input',
+
+                  created: function() {
+                        this.style.border = '1px solid red';
+                  }
+
+            });
+
+            var el1 = new MyInput();
+      </script>
+</dom-module>
