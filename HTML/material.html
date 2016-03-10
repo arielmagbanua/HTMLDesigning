@@ -11,6 +11,10 @@
     <link rel="import" href="elements/picture-frame.html">
     <link rel="import" href="elements/configurable-name-tag.html">
     <link rel="import" href="elements/editable-name-tag.html">
+    <link rel="import" href="elements/event-test.html">
+    <link rel="import" href="elements/drag-me.html">
+    <link rel="import" href="elements/event-retargeting.html">
+    <link rel="import" href="elements/user-view.html">
 
 </head>
 <body>
@@ -23,6 +27,32 @@
     -->
     <!--<name-tag></name-tag>-->
     <!--<configurable-name-tag></configurable-name-tag>-->
-    <editable-name-tag></editable-name-tag>
+    <!--<editable-name-tag></editable-name-tag>-->
+    <!--
+    <event-test></event-test>
+    <drag-me></drag-me>
+    <event-retargeting></event-retargeting>
+    -->
+    <user-view first-name="Samuel" last-name="Adams"></user-view>
 </body>
+<script>
+
+    document.querySelector('event-test').addEventListener('kick', function (e) {
+        console.log(e.detail.kicked); // true
+    });
+
+    var el = document.querySelector('event-retargeting');
+
+    el.addEventListener('click', function(){
+        var normalizedEvent = Polymer.dom(event);
+        // logs #myButton
+        console.info('rootTarget is:', normalizedEvent.rootTarget);
+        // logs the instance of event-targeting that hosts #myButton
+        console.info('localTarget is:', normalizedEvent.localTarget);
+        // logs [#myButton, document-fragment, event-retargeting,
+        // body, html, document, Window]
+        console.info('path is:', normalizedEvent.path);
+    });
+
+</script>
 </html>

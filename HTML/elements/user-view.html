@@ -1,0 +1,21 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<dom-module id="user-view">
+
+    <template>
+        First: {{firstName}}<br>
+        Last: {{lastName}}
+    </template>
+
+    <script>
+        Polymer({
+            is: 'user-view',
+            properties: {
+                firstName: String,
+                lastName: String
+            }
+        });
+    </script>
+
+</dom-module>

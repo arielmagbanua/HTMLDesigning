@@ -1,0 +1,36 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<dom-module id="event-test">
+    <template>
+        <div>I will respond</div>
+        <div>to a tap on</div>
+        <div>any of my children!</div>
+        <div id="special">I am special!</div>
+        <button on-click="handleClick">Kick Me</button>
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'event-test',
+
+            listeners: {
+                'tap': 'regularTap',
+                'special.tap': 'specialTap'
+            },
+
+            regularTap: function(e) {
+                alert("Thank you for tapping");
+            },
+
+            specialTap: function(e) {
+                alert("It was special tapping");
+            },
+
+            handleClick: function(e, detail) {
+                this.fire('kick', {kicked: true});
+            }
+        });
+    </script>
+</dom-module>
