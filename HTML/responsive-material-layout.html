@@ -11,21 +11,59 @@
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
-
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 </head>
+
+<!--
 <body class="fullbleed vertical layout">
-    <!-- paper-header-panel must have an explicit height -->
-    <paper-header-panel class="flex">
-        <paper-toolbar class="tall">
-            <div>Header</div>
-            <span class="flex"></span>
-            <paper-icon-button icon="search">Search</paper-icon-button>
-            <span class="flex"></span>
-            <div>Test</div>
+
+    <paper-header-panel class="flex" mode="standard">
+        <paper-toolbar class="medium-tall">
+
+            <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
+
+
+            <span class="flex">Title</span>
+
+
+            <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
+
+            <paper-tabs class="bottom fit" selected="0">
+                <paper-tab>ONE</paper-tab>
+                <paper-tab>TWO</paper-tab>
+            </paper-tabs>
+
         </paper-toolbar>
-        <div>Content</div>
+
+        <div>Content Test!</div>
+
     </paper-header-panel>
-
-
 </body>
+-->
+
+<body class="fullbleed vertical layout">
+
+    <paper-drawer-panel class="flex">
+
+        <paper-header-panel drawer>
+            <paper-toolbar>
+                <div>Application</div>
+            </paper-toolbar>
+            <div> Drawer content... </div>
+        </paper-header-panel>
+
+        <paper-header-panel main>
+
+            <paper-toolbar>
+                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                <div>Title</div>
+            </paper-toolbar>
+
+            <div> Main content... </div>
+
+        </paper-header-panel>
+
+    </paper-drawer-panel>
+</body>
+
 </html>
