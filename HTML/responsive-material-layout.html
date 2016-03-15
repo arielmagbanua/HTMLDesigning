@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Layout</title>
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
@@ -12,6 +15,10 @@
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+
 </head>
 
 <!--
@@ -43,6 +50,7 @@
 
 <body class="fullbleed vertical layout">
 
+
     <paper-drawer-panel class="flex">
 
         <paper-header-panel drawer>
@@ -64,6 +72,24 @@
         </paper-header-panel>
 
     </paper-drawer-panel>
+
+
+    <paper-input label="Your name here"></paper-input>
+    <paper-button>Say Hello</paper-button>
+    <div id="greeting"></div>
+
+    <script>
+        // To ensure that elements are ready on polyfilled browsers,
+        // wait for WebComponentsReady.
+        document.addEventListener('WebComponentsReady', function() {
+            var input = document.querySelector('paper-input');
+            var button = document.querySelector('paper-button');
+            var greeting = document.getElementById("greeting");
+            button.addEventListener('click', function() {
+                greeting.textContent = 'Hello, ' + input.value;
+            });
+        });
+    </script>
 </body>
 
 </html>
